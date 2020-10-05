@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Stack<int> Mystack = new Stack<int>();
+            Mystack.Push(2);
+            Mystack.Push(4);
+            Mystack.Push(6);
+            Mystack.Push(8);
+            Mystack.Push(10);
+            Mystack.Push(12);
+            Mystack.Push(14);
+            Mystack.Push(16);
+            Mystack.Push(18);
+            Mystack.Push(20);
+            foreach(int stack in Mystack)
+{
+                Console.WriteLine("the elements in stack are:" + stack);//push
+            }
+            Console.WriteLine("PEEK ELEMENT IS " + Mystack.Peek());
+            Console.WriteLine("pop elements is " + Mystack.Pop());
+            Console.WriteLine("pop element is " + Mystack.Pop());
+            Console.WriteLine("pop element is " + Mystack.Pop());
+            Console.WriteLine("pop element is " + Mystack.Pop());
+            Console.WriteLine("pop element is " + Mystack.Pop());
+            Console.WriteLine("pop element is " + Mystack.Pop());
+            //   Console.WriteLine("pop element is " + Mystack.Pop());
+            foreach(int stack in Mystack)
+            {
+                Console.WriteLine("the left elmenets are :" + stack);
+            }
+           
+            Console.ReadKey();
+
+        }
+    }
+}
