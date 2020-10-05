@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+namespace List
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //CREATE AN OBJECT FOR LIST
+            // <Data type variable name=new List<Data type>();
+            var user = new List<string>();
+            user.Add("programming");
+            user.Add("is fun");
+            user.Add("c# lists in collections");
+            user.Add("technical friendly");
+            foreach (var li in user)//to see all elements in one shot
+            {
+                Console.WriteLine("the elements of list are " + li);
+               // Console.WriteLine("list created");
+ }
+            Console.WriteLine("checking for remove method " + user.Remove("is fun"));
+
+            var mobile = new List<string>() { "sachin", "rohit", "rahul", "warner" };//another way of intiliazing
+            foreach (var li1 in mobile)
+            {
+                Console.WriteLine("another way of creating a list :" + li1);
+            }
+            //accessing the elements 
+            Console.WriteLine("the first element in the list is " + mobile[0]);
+            Console.WriteLine("the second element in the list is " + mobile[1]);
+            Console.WriteLine("the first element in the list is " + mobile[2]);
+            Console.WriteLine("the first element in the list is " + mobile[3]);
+            //insert method which gives two arg to pass in method---position and value
+            mobile.Insert(4, "yuvaraj");
+            mobile.Insert(5, "dhoni");
+            Console.WriteLine("the value for insert method is " + mobile[4]);
+            Console.WriteLine("the value for insert method is " + mobile[5]);
+            //contains return boolean value true or false
+            Console.WriteLine(mobile.Contains("dhoni"));
+            Console.ReadKey();
+        }
+    }
+}
