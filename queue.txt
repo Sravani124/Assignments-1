@@ -1,0 +1,82 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AT_queue
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Queue<int> qt = new Queue<int>();
+            qt.Enqueue(10);
+            qt.Enqueue(20);
+            qt.Enqueue(30);
+            qt.Enqueue(40);
+            qt.Enqueue(50);
+            qt.Enqueue(60);
+            qt.Enqueue(70);
+          foreach (int qu in qt)
+            {
+                Console.WriteLine("the elements in queue:" + qu);
+            }
+ Console.WriteLine("the peek element is" + qt.Peek());
+            ////4
+            //Console.WriteLine("the removing element is:" + qt.Dequeue());
+            //Console.WriteLine("the removing element is:" + qt.Dequeue());
+            //Console.WriteLine("the removing element is:" + qt.Dequeue());
+            //Console.WriteLine("the removing element is:" + qt.Dequeue());
+            //foreach (int qu in qt)
+            //{
+            //    Console.WriteLine("the elements in queue:" + qu);
+            //}
+
+            //  Console.WriteLine("the element is present or not" + qt.Contains(40));
+            qt.Enqueue(60);
+Console.WriteLine("The no.of elements in queue are:" + qt.Count());
+            Console.WriteLine("The elements exist in queue is:" + qt.Contains(2));
+            qt.Enqueue(80);
+            Console.WriteLine("The no.of elements in queue are:" + qt.Count());
+            Console.WriteLine("The elements exist in queue is:" + qt.Contains(4));
+            qt.Enqueue(70);
+            Console.WriteLine("The no.of elements in queue are:" + qt.Count());
+            Console.WriteLine("The elements exist in queue is:" + qt.Contains(6));
+            qt.Enqueue(80);
+            Console.WriteLine("The no.of elements in queue are:" + qt.Count());
+            Console.WriteLine("The elements exist in queue is:" + qt.Contains(8));
+            qt.Enqueue(90);
+            Console.WriteLine("The no.of elements in queue are:" + qt.Count());
+            Console.WriteLine("The elements exist in queue is:" + qt.Contains(10));
+            Console.WriteLine("The list of elements in queue are:");
+            foreach (int qu in qt)
+            {
+                Console.WriteLine("elements of queue are:" + x);
+            }
+
+            Console.WriteLine("pop element of queue is:" + qt.Dequeue());
+            Console.WriteLine("The no.of elements in queue are:" + qt.Count());
+            Console.WriteLine("The elements exist in queue is:" + qt.Contains(20));
+            Console.WriteLine("pop element of queue is:" + qt.Dequeue());
+Console.WriteLine("pop element of queue is:" + qt.Dequeue());
+            Console.WriteLine("The no.of elements in queue are:" + qt.Count());
+            Console.WriteLine("The elements exist in queue is:" + qt.Contains(50));
+            Console.WriteLine("pop element of stack is:" + q.Dequeue());
+            Console.WriteLine("The no.of elements in queue are:" + qt.Count());
+            Console.WriteLine("The elements exist in queue is:" + qt.Contains(22));
+            Console.WriteLine("pop element of stack is:" + q.Dequeue());
+            Console.WriteLine("The no.of elements in queue are:" + qt.Count());
+            Console.WriteLine("The elements exist in queue is:" + qt.Contains(30));
+            Console.WriteLine("pop element of queue is:" + qt.Dequeue());
+            Console.WriteLine("The no.of elements in queue are:" + qt.Count());
+            Console.WriteLine("The elements exist in queue is:" + qt.Contains(60));
+            Console.WriteLine("The list of elements in queue are:");
+            foreach (int qu in qt)
+            {
+                Console.WriteLine("the elements in queue is:" + qt );
+            }
+            Console.ReadKey();
+      }
+    }
+}
