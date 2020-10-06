@@ -1,0 +1,185 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
+namespace AT4_RE
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string value = "4 AND 5";
+
+            // Step 1: get first match.
+            Match match = Regex.Match(value, @"\d");
+            if (match.Success)
+            {
+                Console.WriteLine(match.Value);
+            }
+
+            // Step 2: get second match.
+            match = match.NextMatch();
+            if (match.Success)
+            {
+                Console.WriteLine(match.Value);
+            }
+
+            string value1 = "10 and 20 and 30";
+            Match match1 = Regex.Match(value1, @"\d+");
+            if (match1.Success)
+            { Console.WriteLine("match found value is:" + match1.Value);
+            }
+
+            match1 = match1.NextMatch();
+            if (match1.Success)
+            {
+                Console.WriteLine("second value is:" + match1.Value);
+            }
+            match1 = match1.NextMatch();
+            if (match1.Success)
+            {
+                Console.WriteLine("Third value is:" + match1.Value);
+            }
+
+            Console.ReadKey();
+
+        }
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+namespace AT3_RE
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+                string test = "xxyy";
+
+                // Match the start of a string.
+                if (Regex.IsMatch(test, "^xx"))
+                {
+                    Console.WriteLine("START MATCHES");
+                }
+
+                // Match the end of a string.
+                if (Regex.IsMatch(test, "yy$"))
+                {
+                    Console.WriteLine("END MATCHES");
+                }
+
+
+            string test1 = "aaabbbb";
+ if (Regex.IsMatch(test1, "^aa"))
+            {
+                Console.WriteLine("the match is found starts with aa");
+            }
+            else
+            {
+                Console.WriteLine("match is not found doesnot starts with aa");
+            }
+            if (Regex.IsMatch(test1, "bb$"))
+            {
+                Console.WriteLine("ends with bb");
+            }
+            else
+            {
+                Console.WriteLine("not ends with yy");
+            }
+            Console.ReadKey();
+            }
+        }
+
+    }
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+namespace AT_2_re
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           
+                // Part 1: the input string.
+                string input = "/content/alternate-1.aspx";
+
+                // Part 2: call Regex.Match.
+                  Match match = Regex.Match(input, @"content/([A-Za-z0-9\-]+)\.aspx$", RegexOptions.IgnoreCase);
+
+            // Part 3: check the Match for Success.
+            if (match.Success)
+                {
+                    // Part 4: get the Group value and display it.
+                    string key = match.Groups[1].Value;
+                    Console.WriteLine(key);
+                }
+
+            string input1 = "/sravani/maveelapally-2.aspx";
+atch match1 = Regex.Match(input1, @"/sravani/([A-Za-z0-9\-]+)\.aspx", RegexOptions.IgnoreCase);
+            if (match1.Success)
+            {
+                string key1= match1.Groups[1].Value;
+                Console.WriteLine( key1 );
+            }
+            Console.ReadKey();
+            }
+        }
+    }
+    
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+namespace At1_RE
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // Step 1: create new Regex.
+            Regex regex = new Regex(@"\d+");
+
+            // Step 2: call Match on Regex instance.
+            Match match = regex.Match("a55a");
+
+            // Step 3: test for Success.
+            if (match.Success)
+            {
+                Console.WriteLine("MATCH VALUE: " + match.Value);
+            }
+            //another example
+            Regex regex1 = new Regex(@"\d+");
+            Match match1 = regex1.Match("sravani100055maveelapally");
+            if (match1.Success)
+            {
+                Console.WriteLine("the matched value is:" + match1.Value);
+            }
+            else
+            {
+                Console.WriteLine("the match is not found");
+            }
+            Console.ReadKey();
+        }
+    }
+}
