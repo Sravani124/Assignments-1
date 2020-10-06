@@ -1,0 +1,75 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Reflection;
+namespace reflection
+{
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Type t = typeof(int);
+           
+           
+            Console.WriteLine("Name:{0}", t.Name);
+            Console.WriteLine("FullName:{0}", t.FullName);
+            //Console.WriteLine("LastName:{0}", t.LastName);
+            Console.WriteLine("Namespace:{0}", t.Namespace);
+            Console.WriteLine("BaseType:{0}", t.BaseType);
+            // Type T1 = typeof(int);
+           //Console.WriteLine(T);
+
+            int i = 42;
+            System.Type type = i.GetType();//system32
+            System.Console.WriteLine(type);
+            //example of uses of reflection to obtain fullname of the loaded assembly
+            System.Reflection.Assembly info = typeof(System.Int32).Assembly;
+
+            Console.WriteLine(info);
+
+
+        
+            Console.ReadKey();
+        }
+    }
+       
+    }
+
+//generic
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Generic
+{
+    class example<T>
+    {
+        T data;//type parameter declared
+        //creating a method for class example
+        public example(T check)
+        {
+            this.data = check;
+        }
+        public void write()//sending a value to check
+        {
+            Console.WriteLine("value pass to intilizer is:" + this.data);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            example<int> result = new example<int>(100);
+            example<string> result1 = new example<string>("sravani");
+            
+            result.write();
+            result1.write();
+}
+}
+}
