@@ -1,0 +1,93 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LINQ_AT
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            IList<Employee> empList = new List<Employee>()
+            {
+                new Employee(){employeeid=2,employeename="smithi",employeesalary=21000,employeedesignation="manager"},
+                new Employee(){employeeid=3,employeename="sonii",employeesalary=22000,employeedesignation="product manager"},
+                 new Employee(){employeeid=4,employeename="bhargavi",employeesalary=23000,employeedesignation="assistant manager"},
+                 new Employee(){employeeid=4,employeename="shloka",employeesalary=30000,employeedesignation="trainer"},
+
+            };
+            List<department> departmentlist = new List<department>()
+            {
+                new department(){department_id='1',depart_name="CSE"},
+                new department(){department_id='2',depart_name="EEE"},
+                new department(){department_id='3',depart_name="ECE"},
+                new department(){department_id='4',depart_name="CIVIL"},
+                new department(){department_id='5',depart_name="MECHANICAL"},
+            };
+            //apply linq with sql
+            var employeename = empList.Where(s => s.employeesalary > 21000).Select(s => s).Where(st => st.employeeid > 2).Select(s => s.employeename);
+            foreach (var employee in employeename)
+            {
+                Console.WriteLine(employee);
+            }
+            //2
+            var employeename1 = from s in empList
+                                where s.employeeid > 2 && s.employeesalary > 21000
+                                select new { employeename = s.employeename };
+            employeename1.ToList().ForEach(s => Console.WriteLine(s.employeename));
+            //foreach(var employe1 in employeename1)
+            //{
+            //    Console.WriteLine(employe1);
+            //}
+            //groupby
+            var employename2 = from s in empList
+                               group s by s.employeeid into sb
+                               orderby sb.Key
+                               select new { sb.Key, sb };
+            foreach(var employee1 in employename2)
+            {
+                Console.WriteLine(employee1);
+
+            }
+            //group by query
+            var employename3 = from s in empList
+                               where s.employeeid > 2
+                               where s.employeesalary > 20000
+                               group s by s.employeeid into sb
+                               orderby sb.Key
+                               select new { sb.Key, sb };
+            foreach (var employee2 in employename3)
+            {
+                Console.WriteLine(employee2);
+
+            }
+            
+
+            var employeename4 = from s in empList
+                        join d in departmentlist
+                        on s.employeeid equals d.department_id
+                        select new { d.department_id, s.employeename, d.depart_name };
+            foreach (var x in employeename4)
+            {
+                Console.WriteLine("employeeName:{0} \t DepartmentName:{1}\t DepartmentId:{2}", x.employeename, x.depart_name, x.department_id);
+            }
+            Console.ReadKey();
+            
+        }
+
+            class Employee
+        {
+            public int employeeid { get; set; }
+            public string employeename { get; set; }
+            public int employeesalary { get; set; }
+            public string employeedesignation { get; set; }
+        }
+        class department
+        {
+            public int department_id { get; set; }
+            public string depart_name { get; set; }
+        }
+    }
+    }
