@@ -1,0 +1,118 @@
+
+
+example-1
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace anonomous_at1
+{
+    class Program
+    {
+        public delegate void Addnumsdelegate(int a, int b);
+
+        //named methods
+        //public static void Addnums(int a,int b)
+        //{
+        //    Console.WriteLine(a + b);
+        //}
+        static void Main(string[] args)
+        {
+            //   Addnumsdelegate obj = new Addnumsdelegate(Addnums);
+            //{
+            //    obj.Invoke(100,50);
+            //}
+
+            //using anonmyous
+            Addnumsdelegate obj = delegate (int a, int b)
+            {
+                Console.WriteLine(a + b);
+            };
+            obj.Invoke(100, 200);
+            Console.ReadLine();
+        }
+    }
+}
+
+example-2
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace anonomous_AT2
+{
+    class Program
+
+    {
+        public delegate void Addnumsdelegate(int a, int b);
+
+        //named methods
+        //public static void Addnums(int a,int b)
+        //{
+        //    Console.WriteLine(a + b);
+        //}
+        static void Main(string[] args)
+        {
+            //   Addnumsdelegate obj = new Addnumsdelegate(Addnums);
+            //{
+            //    obj.Invoke(100,50);
+            //}
+
+            //using anonmyous
+            Addnumsdelegate obj = delegate (int a, int b)
+            {
+                Console.WriteLine(a - b);//SUBRATCTION
+            };
+            obj.Invoke(200, 100);
+  Console.ReadLine();
+        }
+    }
+}
+        
+//example-3,4
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace anonomous_AT3
+{
+    class Program
+    {
+        
+            public delegate void Namedelegate(string str);
+        public delegate void Name1delegate(string str);
+
+            //named methods
+            //public static void Addnums(int a,int b)
+            //{
+            //    Console.WriteLine(a + b);
+            //}
+            static void Main(string[] args)
+            {
+                //   Addnumsdelegate obj = new Addnumsdelegate(Addnums);
+                //{
+                //    obj.Invoke(100,50);
+                //}
+
+                //using anonmyous
+                Namedelegate obj = delegate (string str)
+                {
+                    Console.WriteLine("hi" + str + "how are you");
+                };
+                obj.Invoke(" sravani");
+
+            Namedelegate obj1 = delegate (string str)
+            {
+                Console.WriteLine("you are" + str + "how is it possible");
+            };
+            obj.Invoke("beautiful");
+        }
+    }
+}
