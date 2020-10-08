@@ -1,0 +1,280 @@
+
+//lambda
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lambda_AT_2
+{
+    class Program
+    {
+        
+        public delegate string method1Delegate(string name);
+        public delegate float method2Delegate(int a, int b, int c);
+        public delegate void method3Delegate(string str);
+        public delegate void method4Delegate(float a, float b);
+        public delegate bool method5Delegate(int value);
+        public delegate bool method6Delegate(string name);
+        
+            static void Main(string[] args)
+            {
+                //initialize delegates
+                method1Delegate obj1 = name1 =>
+                {
+                    return "Hello " + name1;
+                };
+                string name = obj1.Invoke("hello india");
+                Console.WriteLine(name);
+
+                method2Delegate obj2 = (a, b, c) =>
+                {
+                    return a * b * c;
+                };
+                float result = obj2.Invoke(10, 20, 30);
+                Console.WriteLine(result);
+
+                method3Delegate obj3 = str1 =>
+                {
+                    Console.WriteLine("program is: " + str1);
+                };
+                obj3.Invoke("Delegate code");
+
+                method4Delegate obj4 = (a, b) =>
+                {
+                    Console.WriteLine(a + b);
+                };
+                obj4.Invoke(11.2f, 23.2f);
+
+
+               method5Delegate obj5 = value =>
+                {
+                    if (value > 4)
+                        return true;
+                    return false;
+                };
+                bool val = obj5.Invoke(30);
+                Console.WriteLine(val);
+
+                method6Delegate obj6 = name1 =>
+                {
+                    if (name1.Length < 4)
+                        return true;
+                    return false;
+                };
+                bool str = obj6.Invoke("sravani");
+                Console.WriteLine(str);
+                Console.ReadKey();
+            }
+        }
+    }
+
+//predefineddelegates
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Predefineddelegates
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //func
+            Func<string, string> obj1 = name1 => "Hi " + name1;
+            string name = obj1.Invoke("india");
+            Console.WriteLine(name);
+
+            Func<int, int, int, int> obj2 = (a, b, c) => (a * b * c);
+            float result = obj2.Invoke(10, 20, 30);
+            Console.WriteLine(result);
+
+            //Action
+            Action<string> obj3 = str1 => Console.WriteLine("program is: " + str1);
+            obj3.Invoke("Delegate code");
+
+            Action<float, float> obj4 = (a, b) => Console.WriteLine(a + b);
+            obj4.Invoke(10.32f, 20.56f);
+
+            //predicate
+            Predicate<int> obj5 = value =>
+            {
+
+                if (value > 18)
+                    return true;
+                return false;
+            };
+            bool val = obj5.Invoke(30);
+            Console.WriteLine(val);
+
+
+            Predicate<string> obj6 = name1 =>
+            {
+                if (name1.Length < 5)
+                    return true;
+                return false;
+            };
+            bool str = obj6.Invoke("jerry");
+            Console.WriteLine(str);
+            Console.ReadKey();
+        }
+    }
+    }
+
+//anonymous
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Anonymous
+{
+    class Program
+    {
+        public delegate int AdditionnumsDelegate(int x, int y);
+        public delegate string NameDelegate(string str);
+        public delegate void MultiplyDelegate(int x, float y, double z);
+        public delegate void Name2Delegate(string str);
+        public delegate bool CheckLengthDelegate(String str);
+        static void Main(string[] args)
+        {
+            AdditionnumsDelegate obj = delegate (int x, int y)
+            {
+                return (x  + y);
+            };
+            double result1 = obj.Invoke(10, 20);//New variable to store the value -return type
+            Console.WriteLine(result1);
+
+
+            NameDelegate p = delegate (string name1)
+            {
+                return "Hello" + name1;
+            };
+            string name = p.Invoke("welcome india");
+            Console.WriteLine(name);
+
+            MultiplyDelegate obj2 = delegate (int x, float y, double z)
+            {
+                Console.WriteLine(x * y * z);
+            };
+            obj2.Invoke(20,45.2f,6789.76);//Non return type
+
+            Name2Delegate s = delegate (string name3)
+            {
+                Console.WriteLine(name3 + " " + "maveelapally");
+            };
+            s.Invoke("sravani ");
+
+
+            CheckLengthDelegate obj3 = delegate (string name1)
+            {
+                //check the string whose length is greater than 4 should print true else false
+                if (name.Length > 4)
+                    return true;
+                return false;
+            };
+
+
+            bool check = obj3.Invoke("Haritha");
+            Console.WriteLine(check);
+
+            CheckLengthDelegate obj4 = delegate (string name2)
+            {
+                //check the string whose length is lesser than 50 should print true else false
+                if (name2.Length < 50)
+                    return true;
+                return false;
+            };//New variable to store the value -return type
+
+            bool ch = obj4.Invoke("beautifull");
+            Console.WriteLine(ch);
+
+
+            Console.ReadLine();
+        }
+    }
+}
+
+//delegate
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DelegateSix_AT
+{
+    //define a delegate
+        public delegate string method1Delegate(string name);
+        public delegate double method2Delegate(int a, int b, int c);
+        public delegate void method3Delegate(string str);
+        public delegate void method4Delegate(float a, float b);
+        public delegate bool method5Delegate(int value);
+        public delegate bool method6Delegate(string name);
+        class Program
+        {
+            public static string method1(string name)
+            {
+                return "sravani" + name;
+            }
+            public static double method2(int a, int b, int c)
+            {
+                return a * b * c;
+            }
+            public static void method3(string str)
+            {
+                Console.WriteLine("she is: " + str);
+            }
+            public static void method4(float a, float b)
+            {
+                Console.WriteLine(a + b);
+            }
+            public static bool method5(int value)
+            {
+                if (value > 4)
+                    return true;
+                return false;
+            }
+            public static bool method6(string name)
+            {
+                if (name.Length < 5)
+                    return true;
+                return false;
+            }
+            static void Main(string[] args)
+            {
+                //initialized delegate for method1
+                method1Delegate obj1 = new method1Delegate(method1);
+                string name = obj1.Invoke("Maveelapally");
+                 Console.WriteLine(name);
+            //intialized delegate for method2
+            method2Delegate obj2 = new method2Delegate(method2);
+            
+                double result = obj2.Invoke(60,50,40);
+                Console.WriteLine(result);
+            //intialize delegate for method3
+                method3Delegate obj3 = new method3Delegate(method3);
+                obj3.Invoke("beautiful");
+            //intialize delegate for method4
+                method4Delegate obj4 = new method4Delegate(method4);
+                obj4.Invoke(12.7f, 13.7f);
+            //intialize delegate for method5
+            method5Delegate obj5 = new method5Delegate(method5);
+                bool val = obj5.Invoke(30);
+                Console.WriteLine(val);
+            //intialize delegate for method5
+             method6Delegate obj6 = new method6Delegate(method6);
+                bool str = obj6.Invoke("sravani");
+                Console.WriteLine(str);
+                Console.ReadLine();
+            }
+        }
+    }
+
+
+
+
