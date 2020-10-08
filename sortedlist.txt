@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+namespace sortedlist
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //characteristics of sorted list
+
+            SortedList<int, string> li = new SortedList<int, string>();
+            li.Add(10, " ten");
+            li.Add(1, " one");
+            li.Add(8," eight");
+            li.Add(5, " five");
+            li.Add(4, " Null");
+            foreach(var check in li)//we can use keyvaluepair or var
+            {
+                Console.WriteLine("elements after the sort "  + "Key:{0} , Value:{1} " , check.Key , check.Value);
+
+            }
+            Console.ReadKey();
+
+
+        }
+    }
