@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Multithreading_AT
+{
+    
+
+
+
+    class Program
+    {
+        public void Thread1()
+        {
+            for (int i = 1; i < 10; i++)
+            {
+                Console.Write("thread1 starts:" + i) ;
+            }
+        }
+        public void Thread2()
+        {
+            for (int j = 1; j < 10; j++)
+            {
+                Console.Write("thread2  starts:" + j);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+
+
+            //string result1 = Thread1();
+            Program P1 = new Program();
+
+            Thread t1 = new Thread(new ThreadStart(P1.Thread1));
+            Thread t2= new Thread(new ThreadStart(P1.Thread2));
+            t1.Start();
+            t2.Start();
+            Console.ReadLine();
+            
+        }
+
+    }
+
+}
+
