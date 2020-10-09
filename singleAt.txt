@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace singlethread
+{
+    class Program
+    {
+        static string Thread1()
+        {
+            return "Thread1 is started";
+        }
+        static string Thread2()
+        {
+            return "Thread2 is started";
+
+        }
+        static string Thread3()
+        {
+            return "Thread3 is started";
+        }
+        static void Main(string[] args)
+        {
+            // Program obj = new Program();
+            string result1 = Thread1();
+            Console.WriteLine(result1);
+
+            string result2 = Thread2();
+            Console.WriteLine(result2);
+
+            string result3 = Thread3();
+            Console.WriteLine(result3);
+            Console.ReadKey();
+        }
+
+        //Console.ReadKey();
+    }
+}
