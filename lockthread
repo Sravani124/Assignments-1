@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Threading;
+namespace ConsoleApp1
+{
+    class Program
+    {
+
+        public void display()
+        {
+            lock (this)//lock {
+            
+                Console.WriteLine("csharp is an:");
+                Thread.Sleep(1000);
+                Console.WriteLine(" object oriented program:");
+            }
+        }
+        static void Main(string[] args)
+        {
+            
+            Program Object = new Program();
+            //intiate a thread with method reference
+            Thread t1 = new Thread(Object.display);
+            Thread t2 = new Thread(Object.display);
+            Thread t3 = new Thread(Object.display);
+            Thread t4 = new Thread(Object.display);
+            Thread t5 = new Thread(Object.display);
+            //Thread t6 = new Thread(Object.display);
+            t1.Start();
+            t2.Start();
+            t3.Start();
+            t4.Start();
+            t5.Start();
+           // t6.Start();
+
+            //Object.display();
+            Console.ReadKey();
+        }
+    }
+}
