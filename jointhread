@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Threading;
+namespace joinmulti
+{
+    class Program
+    {
+        static void Thread1()
+        {
+            Console.WriteLine("thread1 starting");
+            for(int i = 1; i < 15; i++)
+            {
+                Console.WriteLine("thread1 is exiting:" + i);
+            }
+        }
+        static void Thread2()
+        {
+            Console.WriteLine("Thread2 strting:");
+            for (int i = 1; i < 15; i++)
+            {
+                Console.WriteLine("thread2 is exiting:" + i);
+            }
+        }
+        static void Thread3()
+        {
+            Console.WriteLine("thread3 is starting:");
+            for (int i = 1; i < 15; i++)
+            {
+                Console.WriteLine("thread2 is exiting:" + i);
+            }
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("JOINNN");
+            Console.WriteLine("main thread started:");
+            //BIND THE METHOD WITH METHOD OBJECT
+            Thread T1= new Thread(Thread1);
+            Thread T2 = new Thread(Thread2);
+            Thread T3 = new Thread(Thread3);
+            //start the thread or run the thread
+            T1.Start();
+            T2.Start();
+            T3.Start();
+            //T1.Join();
+            //T2.Join();
+            //T3.Join();
+            Console.WriteLine("main thread is exiting");
+            Console.ReadKey();
+        }
+    }
+}
