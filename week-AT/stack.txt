@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Stack<int> s1 = new Stack<int>();
+            //push
+            s1.Push(10);
+            s1.Push(20);
+            s1.Push(30);
+            //to print
+            foreach(var x in s1)
+            {
+                Console.WriteLine("The elements are :" + x);
+            }
+            Console.WriteLine("the first element in stack is:" + s1.Peek());
+
+            Console.WriteLine("to delete the element:" + s1.Pop());
+            foreach (var x in s1)
+            {
+                Console.WriteLine("The left elements are :" + x);
+            }
+
+            Console.WriteLine(s1.Contains(20));
+
+            Console.ReadKey();
+        }
+    }
+}
