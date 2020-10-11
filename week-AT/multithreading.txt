@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Threading;
+namespace Multithreading
+{
+    class Program
+    {
+        static void Thread()//if i mention any parameters to it it becomes parameterized construtor it will not thread start
+        {
+            for (int i = 1; i < 15; i++)
+            {
+                Console.WriteLine("thread started:" + i);
+            }
+        }
+        static void Main(string[] args)
+        {
+            ThreadStart Object = new ThreadStart(Thread);
+            Thread t = new Thread(Object);
+            t.Start();
+
+            Console.ReadKey();
+        }
+        }
+    }
+

@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Threading;
+namespace consmulti
+{
+    class Program
+    {
+        static void Test(Object num1)
+        {
+            int num = Convert.ToInt32(num1);
+            for (int i = 1; i < 15; i++)
+            {
+                Console.WriteLine("thread started:" + i);
+            }
+        }
+            static void Main(string[] args)
+        {
+            ParameterizedThreadStart obj = new ParameterizedThreadStart(Test);
+            Thread T = new Thread(obj);
+            T.Start(15);
+        }
+    }
+}

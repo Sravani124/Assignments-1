@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Delegate_At
+{
+    public delegate string method1Delegate(string name);
+    public delegate double method2Delegate(int a, int b, int c);
+    public delegate void method3Delegate(string str);
+    class Program
+    {
+        public static string method1(string name)
+        {
+            return "sravani" + name;
+
+        }
+
+        public static double method2(int a,int b,int c)
+        {
+            return a * b * c;
+        }
+        public static void method3(string str)
+        {
+            Console.WriteLine("she is :" + str);
+        }
+        static void Main(string[] args)
+        {
+            method1Delegate obj1 = new method1Delegate(method1);
+            string name = obj1.Invoke("Maveelapally");
+            Console.WriteLine(name);
+
+            method2Delegate obj2 = new method2Delegate(method2);
+
+            double result = obj2.Invoke(60, 50, 40);
+            Console.WriteLine(result);
+
+            method3Delegate obj3 = new method3Delegate(method3);
+            obj3.Invoke("beautiful");
+
+
+        }
+   }
+}

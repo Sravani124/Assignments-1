@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Dictionary_At
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Dictionary<int, string> d1 = new Dictionary<int, string>();
+            d1.Add(1, "sunrises hyderabad");
+            d1.Add(2, "Mumbai");
+            d1.Add(3, "Chennai");
+            d1.Add(4, "RCB");
+
+            foreach(KeyValuePair<int,string> x in d1)
+            {
+                Console.WriteLine("the lements in dict is  " + x.Key + " " + x.Value);
+                
+            }
+            //remove
+
+            Console.WriteLine("elemenets to remove " + d1.Remove(4));
+            Console.WriteLine(d1.Count());
+
+            foreach (KeyValuePair<int, string> x in d1)
+            {
+                Console.WriteLine("the elements in dict is  " + x.Key + " " + x.Value);
+            }
+            //count
+           
+            Console.WriteLine(d1.Count());
+            Console.ReadKey();
+        }
+    }
+}

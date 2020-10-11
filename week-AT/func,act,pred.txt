@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace func_acti_pred
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Func<string, string> obj1 = name1 => "Hi " + name1;
+            string name = obj1.Invoke("india");
+            Console.WriteLine(name);
+
+            Action<string> obj3 = str1 => Console.WriteLine("program is: " + str1);
+            obj3.Invoke("Delegate code");
+
+            Predicate<int> obj5 = value =>
+            {
+                if (value > 18)
+                    return true;
+                return false;
+            };
+            bool val = obj5.Invoke(30);
+            Console.WriteLine(val);
+
+        }
+    }
+}

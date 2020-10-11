@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Anonymousdel_At
+{
+    public delegate int AdditionnumsDelegate(int x, int y);
+    public delegate string NameDelegate(string str);
+    public delegate void MultiplyDelegate(int x, float y, double z);
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            AdditionnumsDelegate obj = delegate (int x, int y)
+            {
+                return (x + y);
+            };
+
+            double result1 = obj.Invoke(10, 20);//New variable to store the value -return type
+            Console.WriteLine(result1);
+
+
+            NameDelegate p = delegate (string name1)
+            {
+                return "Hello" + name1;
+            };
+            string name = p.Invoke("welcome india");
+            Console.WriteLine(name);
+
+            MultiplyDelegate obj2 = delegate (int x, float y, double z)
+            {
+                Console.WriteLine(x * y * z);
+            };
+            obj2.Invoke(10, 20.5f, 30.987);
+           
+        }
+    }
+}

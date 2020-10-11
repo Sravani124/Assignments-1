@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+namespace customgeneric
+{
+    class Program
+    {
+
+        class test<T> where T : IDisposable
+        {
+            public void test1()
+            {
+                Console.WriteLine("it is an example of data constraint idisposable");
+            }
+        }
+        class check<T> where T : struct
+        {
+            public void test2()
+            {
+                Console.WriteLine("it is an example of data constraint struct");
+            }
+        }
+        static void Main(string[] args)
+        {
+            
+                test<DataTable> c1= new test<DataTable>();//to store data with class ruby
+                check<int> c2 = new check<int>();
+                c1.test1();
+                c2.test2();
+            }
+    }
+}
