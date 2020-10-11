@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+namespace sortedlist_At
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            SortedList<int, string> s1 = new SortedList<int, string>();
+            s1.Add(1, "sravani");
+            s1.Add(2, "bharghavi");
+            s1.Add(3, "bhavani");
+
+
+            foreach(var x in s1)
+            {
+                Console.WriteLine("elements after the sort " + "Key:{0} , Value:{1} ", x.Key, x.Value);
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
