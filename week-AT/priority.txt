@@ -1,0 +1,63 @@
+using System.Text;
+using System.Threading.Tasks;
+using System.Threading;
+namespace threads
+{
+    class Program
+    {
+        static long count1, count2;
+
+
+        public static void Incrementcount1()
+        {
+            while (true)
+           //indefinite loop
+                
+                count1=count1 + 1;
+
+               // Console.WriteLine("THREAD1 STARTED");
+            
+        }
+
+        public static void Incrementcount2()
+        {
+            while (true)
+            //indefinite loop
+              
+                count2 =count2 + 1;
+
+               // Console.WriteLine("THREAD2 STARTED");
+            
+        }
+
+    
+
+        static void Main(string[] args)
+        {
+            Thread t1 = new Thread(Incrementcount1);//invoke the method Incrementcount1
+            Thread t2 = new Thread(Incrementcount2);//invoke the method Incrementcount2
+            Console.WriteLine("MAIN METHOD GOING TO SLEEP 5 SECONS");
+            Thread.Sleep(5000);
+            Console.WriteLine("main thread wake up");
+
+            t1.Priority = ThreadPriority.Lowest;//execute last
+            t2.Priority = ThreadPriority.Highest;//exceute first take moretime
+
+            t1.Start();
+            t2.Start();
+
+            t1.Abort();
+            t2.Abort();
+
+            t1.Join();
+            t2.Join();
+
+            Console.WriteLine("count1 is:" + count1);
+
+            Console.WriteLine("count2 is:" + count2);
+
+            Console.ReadKey();
+
+        }
+    }
+}
