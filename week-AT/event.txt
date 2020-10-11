@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Event_1
+{
+    class Program
+    {
+        
+         public delegate void evennumber(); //Declared Delegate    
+
+
+        class program
+        {
+            
+            
+            //This is Subscriber Class
+
+            static void Main(string[] args)
+            {
+                evennum e1 = new evennum();
+
+
+                //Event gets binded with delegates or registered with delegate
+
+                e1.evennumber1 += EventMessage;
+
+                e1.even();
+                Console.ReadLine();
+            }
+            //Delegates calls this method when event raised.  
+            static void EventMessage()
+            {
+                Console.WriteLine("********Event Executed : This is even Number**********");
+            }
+        }
+        //This is Publisher Class
+        class evennum
+        {
+
+            public event evennumber evennumber1; //Declared Events
+
+            public void even()
+            {
+
+                //Check if result is even number then raise event
+
+                if (evennumber1 != null)
+                {
+                    evennumber1(); //Raised Event
+                }
+            }
+        }
+    }
+}
+
+  
