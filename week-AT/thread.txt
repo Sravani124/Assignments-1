@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Threading;
+namespace Thread
+{
+    class Program
+    {
+        static string Thread1()
+        {
+            return "Thread1 is started";
+        }
+        static string Thread2()
+        {
+            return "Thread2 is started";
+
+        }
+    
+   static void Main(String[] args)
+    {
+        string result1 = Thread1();
+        Console.WriteLine(result1);
+
+         string result2 = Thread2();
+        Console.WriteLine(result2);
+
+        }
+}
+}
