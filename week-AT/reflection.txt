@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Reflection
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Type t = typeof(int);
+
+            int i = 76;
+            System.Type type = i.GetType();//system32
+            System.Console.WriteLine(type);
+
+            Console.ReadKey();
+        }
+    }
+}
