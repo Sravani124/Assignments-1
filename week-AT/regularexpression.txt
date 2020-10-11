@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+namespace RegularExpression
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Regex ex = new Regex(@"^America");
+
+            Match Match = ex.Match("America is one of the largest country in the world");
+
+            if (Match.Success)
+            {
+                Console.WriteLine("the match of digit is" + Match.Value);
+            }
+
+            Regex ex1 = new Regex(@"\D+");
+
+            Match Match1 = ex.Match("[^(0-9)]");
+
+            if (Match1.Success)
+            {
+                Console.WriteLine("the match of digit is" + Match1.Value);
+            }
+            else
+            {
+                Console.WriteLine("the given value is not matched");
+            }
+
+            string test = "aabbb";
+
+
+            if (Regex.IsMatch(test, "^aa"))                        //ismatch take two parameters
+
+            {
+                Console.WriteLine("pattern matched starting with ");//ismatch take two parameters
+            }
+            else
+            {
+                Console.WriteLine("not matched");
+            }
+            Console.ReadKey();
+        }
+    }
+}
