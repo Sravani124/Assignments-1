@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>sravani</title>
+
+    <style type="text/css">
+        body{
+            background-color:green;
+        }
+    </style>
+</head>
+ 
+
+  <body id="body1">
+    <script type="text/javascript">
+        function f1() {
+            alert("you have clicked the button");
+        }
+        function f2() {
+            document.getElementById('id1').innerHTML = "This is login page";
+        }
+        function f3() {
+            document.getElementById('body1').style.backgroundColor = 'red';
+        }
+
+        //variable
+
+        var A = 20;
+
+
+        if (A <= 20) {
+            document.write("eligible to play cricket");
+        }
+
+        else {
+            document.write("not eligible");
+
+        }
+
+        
+    </script>
+
+
+    <h1 id="id1">This is signup page</h1>
+
+    <button onclick="f1()">click here</button>
+    <button onclick="f2()">chick here to change content</button>
+    <button onclick="f3()">click here to change background color</button>
+
+    
+
+</body>
+</html>

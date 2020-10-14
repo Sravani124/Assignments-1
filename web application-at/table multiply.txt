@@ -1,0 +1,32 @@
+
+//multiply
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+
+        function multiply() {
+            table1 = parseInt(table.table1.value);
+            limit1 = parseInt(table.limit1.value);
+            for (limit1 = 1; limit1 <= 5; limit1++) {
+                result = table1 * limit1;
+                window.alert("the multiplication table is " + result);
+                table.result.value = result;
+
+            }
+        }
+
+    </script>
+    <form  name="table">
+        <input type="text" name="table1" /><br /><br />
+        <input type="text" name="limit1" /><br /><br />
+        <input type="button" value="multiply" onclick="multiply()" /><br />
+        <input type="text" name="result" /><br />
+    </form>
+</body>
+</html>

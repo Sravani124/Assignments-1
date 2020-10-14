@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>SRAVANI</title>
+    <link rel="stylesheet" href="StyleSheet1.css">
+</head>
+<body>
+    <a href="https://www.google.com">google</a><br /><br />
+
+  <img src="https://d3b8hk1o42ev08.cloudfront.net/wp-content/uploads/2018/08/computer-science-header-1-752x347.jpg" />
+
+
+
+    <h1>CUSTOMER LOGIN PAGE</h1>
+
+    <form id="center">
+        First Name <input type="text" name="fname" placeholder="First Name"/> <br> <br />
+
+        Last Name<input type="text" name="lname" placeholder="Last Name"/>  <br /><br />
+
+        Male<input type="radio" name="u" value="Male"  /> <br /><br />
+
+        Female <input type="radio" name="u1" value="Female" /> <br /><br />
+
+        Email<input type="email" name="email" placeholder="Email"/> <br /><br />
+
+        Hobby:Singing<input type="checkbox" name="check"/><br /><br />
+
+        Dancing<input type="checkbox" name="check1"/> <br /><br />
+
+        <input type="submit" name="submit"/>
+
+
+    </form>
+
+    <br /> <br />
+
+    <table border="1">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+        </tr>
+
+
+        <tr>
+        <td>bharghavi</td>
+        <td>alluri</td>
+        <td>21</td>
+        </tr>
+
+        <tr>
+            <td>shll</td>
+            <td>fddd</td>
+            <td>45</td>
+        </tr>
+    </table>
+</body>
+</html>

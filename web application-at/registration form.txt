@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>sravani page</title>
+</head>
+<body>
+    <a href="https://www.google.com">google page to open college website</a><br /><br />
+
+    <h1>WELCOME TO SIDDHARTHA INSTITUTE OF ENGINEERING AND TECHNOLOGY</h1><br /><br />
+
+
+    <img src="https://images.shiksha.com/mediadata/images/1554718943phpf9o3Gu.jpeg" /><br /><br />
+
+    <video width="320" height="240" controls>
+        <source src="https://www.youtube.com/watch?v=ZofgQX9Ongg" type="video/mp4">Video about the college
+    </video>
+    <br /><br />
+
+
+    <h2> DETAILS OF SIET MANAGEMENT</h2><br /><br />
+    <table border="1">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Phone number</th>
+        </tr>
+
+
+        <tr>
+            <td>Nagaiaah</td>
+            <td>elluri</td>
+            <td>52</td>
+            <td>6754331234</td>
+        </tr>
+
+        <tr>
+            <td>Bhagat</td>
+            <td>Rao</td>
+            <td>34</td>
+            <td>7899993221</td>
+        </tr>
+    </table>
+    <br /><br />
+
+    <p> Nagaiahh</p>
+    <h2>STUDENT LOGIN FORM </h2><br />
+
+    <form id="center">
+        First Name <input type="text" name="fname" placeholder="First Name" /> <br> <br />
+
+        Last Name<input type="text" name="lname" placeholder="Last Name" />  <br /><br />
+
+        Male<input type="radio" name="u1" value="Male" /> <br /><br />
+
+        Female <input type="radio" name="u1" value="Female" /> <br /><br />
+
+        Email<input type="email" name="email" placeholder="Email" /> <br /><br />
+
+        Cousre:CSE<input type="radio" name="check" /><br /><br />
+
+        ECE<input type="radio" name="check" /> <br /><br />
+
+        EEE<input type="radio" name="check" /> <br /><br />
+
+        CIVIL<input type="radio" name="check" /> <br /><br />
+
+        <input type="submit" name="submit" />
+
+
+  </form> 
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Calculation</title>
+</head>
+<body>
+    <p id="button1"></p>
+    <p id="button2"></p>
+    <p id="button3"></p>
+    <p id="button4"></p>
+
+    <button onclick="add()">sum of two numbers</button><br />
+    <button onclick="sub()">subtraction of two numbers</button><br />
+    <button onclick="mul()">multiplication of two numbers</button><br />
+    <button onclick="div()">division of two numbers</button><br />
+
+    <script>
+
+        var x = 40;
+        var y = 30;
+        var result = x + y;
+        var result2 = x - y;
+        var result3 = x * y;
+        var result4 = x / y;
+
+        function add() {
+            document.getElementById("button1").innerHTML = result;
+
+        }
+        function sub() {
+            document.getElementById("button2").innerHTML = result2;
+        }
+        function mul() {
+            document.getElementById("button3").innerHTML = result3;
+
+        }
+
+        function div() {
+            document.getElementById("button4").innerHTML = result4;
+        }
+    </script>
+
+
+    
+</body>
+</html>
