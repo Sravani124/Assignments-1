@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>sravani page</title>
+    <style>
+        .a {
+            background-color: violet;
+            border: 3px;
+            font-style: normal;
+            font-family: Impact, Charcoal, sans-serif;
+            font-size: 20px;
+            color: black;
+        }
+
+        .b {
+            background-color: indigo;
+            border: 3px;
+            font-style: normal;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 20px;
+            color: blue;
+        }
+
+        .c {
+            background-color: skyblue;
+            border: 2px;
+            font-style: normal;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 20px;
+            color: blueviolet;
+        }
+
+        .d {
+            background-color: green;
+            border: 3px;
+            font-style: normal;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 20px;
+            color: peru;
+        }
+
+        .e {
+            background-color: white;
+            border: 3px;
+            font-style: normal;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 20px;
+            color: bisque;
+        }
+
+        .f {
+            background-color: orange;
+            border: 3px;
+            font-style: normal;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 20px;
+            color: royalblue;
+        }
+    </style>
+
+   
+</head>
+
+<body>
+
+    <h1 class="a">Hello world</h1>
+    <h2 class="b">Welcome to DXC</h2>
+    <h3 class="c">We are Learning Java Script</h3>
+    <h4 class="d">Java Script makes our page responsive</h4>
+    <h5 class="e">Java script runs through browser</h5>
+    <h6 class="f">Java Script has different objects</h6>
+
+    <p>Click the button below to disable the button above.</p>
+
+    <button id="btn" onclick="Func()">Try it</button>
+
+    <script>
+        function Func() {
+            document.getElementById("btn").disabled = true;
+            alert("button will be disabled");
+        }
+    </script>
+
+</body>
+</html>
