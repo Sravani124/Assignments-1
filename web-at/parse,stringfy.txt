@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>parse</title>
+
+
+</head>
+<body>
+
+
+
+    <h2>Create Object from JSON String</h2>
+
+    <p id="demo"></p>
+
+
+    <!--//stringfy-->
+    <h2>Create JSON string from a JavaScript object.</h2>
+
+    <p id="demo1"></p>
+
+    <script>
+        var txt = '{"name":"sravani", "age":22, "city":"New York"}'
+        var obj = JSON.parse(txt);
+        document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
+    </script>
+
+
+    <!--//stringfy-->
+    <script>
+        var obj = { name: "sravani1", age: 22, city: "New York" };
+        var myJSON = JSON.stringify(obj);
+        document.getElementById("demo").innerHTML = myJSON;
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>json </title>
+</head>
+<body>
+
+    <p>Json datatypes</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <script>
+       //string
+        x = { "name": "sravani" }
+        //numbers
+        y = { "age": 22 }
+        //objects
+        
+      var  employee = { "name": "sravani", "age": 22, "city": "New York" };
+        
+
+        //arrays
+        
+        var employees= ["sinnt", "fazz", "anudeep"];
+        
+
+        //boolean
+        var z = { "sale": true };
+
+        //null
+        var d = { "middlename": null };
+
+        //accessing
+
+        name = x.name;
+        document.getElementById("demo").innerHTML = name;
+
+
+        //number accessing
+
+        number = y.age;
+        document.getElementById("demo1").innerHTML = number;
+
+        //object accessing
+
+        object1 = employee.city;
+        document.getElementById("demo2").innerHTML = object1;
+
+        //arrays
+
+        array = employees.concat();
+        document.getElementById("demo3").innerHTML = array;
+
+        //boolean
+        boolean = z.sale;
+        document.getElementById("demo4").innerHTML = boolean;
+
+        //null
+
+        null1 = d.middlename;
+        document.getElementById("demo5").innerHTML =null1;
+
+    </script>
+</body>
+</html>
