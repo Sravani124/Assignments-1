@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function () {
+              $("button").click(function () {
+               $("#div1") .fadeToggle();
+                $("#div2").  fadeOut();
+                $("#div3"). fadeToggle("slow");
+                $("#div4").  fadeIn(1000);
+            });
+        });
+    </script>
+
+    <p>this is demo about jquery effects on fade mechanism</p>
+    <div id="div1" style="width:70px;height:80px;background-color:cyan"></div>
+    <div id="div2" style="width:70px;height:80px;background-color:red"></div>
+    <div id="div3" style="width:70px;height:80px;background-color:yellow"></div>
+    <div id="div4" style="width:70px;height:80px;background-color:green"></div><br /><br />
+    <button >click to see fade effects</button>
+</body>
+</html>

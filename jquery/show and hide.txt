@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--script>
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("h3").hide();
+            });
+
+            $("#show").click(function () {
+                $("h3").show();
+            });
+        });
+    </script>-->
+
+    <!--<script>
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("h3").hide(10000);
+            });
+
+            $("#show").click(function () {
+                $("h3").show(10000);
+            });
+        });
+    </script>-->
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("h3").toggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>this is demo of hide and show effects-jquery</h3>
+
+    <!--<button id="hide">hide</button><br /><br />
+    <button id="show">show</button>-->
+    <button >click on the button to see the toggle of show and hide</button>
+</body>
+</html>
