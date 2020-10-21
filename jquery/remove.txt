@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--removing elemnets-->
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#div1").remove();
+            });
+        });
+    </script>
+
+    <!--//empty the element-->
+    <script>
+        $(document).ready(function () {
+            $("button1").click(function () {
+                $("#div2").empty();
+            });
+        });
+    </script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("button2").click(function () {
+                $("p").remove(".test");
+            });
+        });
+    </script>
+
+
+    <style>
+        .test {
+            color: cornflowerblue;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+        This is some text in the div.
+        <p>This is a paragraph in the div.</p>
+        <p>This is another paragraph in the div.</p>
+
+    </div>
+    <br>
+
+    <button>Remove div element</button><br /><br />
+
+
+
+    <div id="div2" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+        This is some text in the div.
+        <h4>This is a paragraph in the div.</h4>
+        <h5>This is another paragraph in the div.</h5>
+
+    </div>
+    <br>
+
+    <button1>empty the div element</button1><br /><br />
+
+
+
+    <p>This is a paragraph.</p>
+    <p class="test">This is another paragraph.</p>
+    <p class="test">This is another paragraph.</p>
+
+    <button2>Remove all p elements with class="test"</button2>
+</body>
+</html>
