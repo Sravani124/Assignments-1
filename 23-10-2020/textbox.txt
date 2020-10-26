@@ -1,0 +1,51 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="textbox.aspx.cs" Inherits="textbox" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:Label ID="label1" runat="server" Text="Username" />
+
+            <asp:TextBox ID="TextBox1" runat="server" />
+
+        </div>
+
+        <p>
+            <asp:Button ID="Button1" runat="server" Text="submit" OnClick="Button1_Click" />
+        </p>
+    </form>
+    <asp:Label ID="userinput"  runat="server" />
+</body>
+</html>
+
+
+//textbox.cs
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class textbox : System.Web.UI.Page
+{
+    
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        userinput.Text =TextBox1.Text;
+    }
+}
