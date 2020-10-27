@@ -1,0 +1,26 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="link.aspx.cs" Inherits="at_26.link" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            
+			<asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton1_Click">Instagram</asp:LinkButton><br />
+			<asp:LinkButton ID="LinkButton4" runat="server" OnClientClick="string" OnClick="LinkButton2_Click" >Facebook</asp:LinkButton><br />
+			<asp:LinkButton ID="LinkButton5" runat="server" OnLoad="LinkButton2_Load" OnClick="LinkButton5_Click">Twitter</asp:LinkButton><br /><br />
+			
+            <p>
+				<asp:Label ID="Label1" runat="server"></asp:Label><br />
+				<asp:Label ID="Label2" runat="server"></asp:Label><br />
+				<asp:Label ID="Label3" runat="server" ></asp:Label>
+			</p>
+        </div>
+    </form>
+</body>
+</html>
