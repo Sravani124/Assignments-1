@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+
+namespace WebApplication2
+{
+    public partial class cookie2at : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            HttpCookie cookie = new HttpCookie("employee name");
+            HttpCookie cookie1 = new HttpCookie("employee id");
+            HttpCookie cookie2 = new HttpCookie("employee address");
+            HttpCookie cookie3 = new HttpCookie("employee department");
+            HttpCookie cookie4 = new HttpCookie("employee gender");
+
+            cookie.Value = "sravani";
+            cookie1.Value = "564";
+            cookie2.Value = "hyderabd";
+            cookie3.Value = "Developer";
+            cookie4.Value = "Female";
+
+            Response.Cookies.Add(cookie);
+            Response.Cookies.Add(cookie1);
+            Response.Cookies.Add(cookie2);
+            Response.Cookies.Add(cookie3);
+            Response.Cookies.Add(cookie4);
+
+
+            var Cookie_Value = Response.Cookies["employee name"].Value;
+            var Cookie1_Value = Response.Cookies["employee id"].Value;
+            var Cookie2_Value = Response.Cookies["employee address"].Value;
+            var Cookie3_Value = Response.Cookies["employee department"].Value;
+            var Cookie4_Value = Response.Cookies["employee gender"].Value;
+
+
+            Label1.Text = Cookie_Value;
+            Label2.Text = Cookie1_Value;
+            Label3.Text = Cookie2_Value;
+            Label4.Text = Cookie3_Value;
+            Label5.Text = Cookie4_Value;
+        }
+    }
+}

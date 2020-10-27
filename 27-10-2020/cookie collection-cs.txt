@@ -1,0 +1,61 @@
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace WebApplication2
+{
+    public partial class cookie3_at : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Response.Cookies["computer"].Expires = DateTime.Now.AddDays(-1);
+        }
+
+        protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            Label2.Text = "";
+
+            //adding cookies
+            if (CheckBox1.Checked)
+                Response.Cookies["computer"]["samsung"] = "you have checked for samsung trigrred";
+            //adding cookies
+            if (CheckBox2.Checked)
+                Response.Cookies["computer"]["nokia"] = "you have checked for nokia";
+            //adding cookies
+            if (CheckBox3.Checked)
+                Response.Cookies["computer"]["vivo"] = "you have checked for vivo";
+            //adding cookies
+            if (CheckBox4.Checked)
+                Response.Cookies["computer"]["oppo"] = "you have checked for oppo";
+            //adding cookies
+            if (CheckBox5.Checked)
+                Response.Cookies["computer"]["realme"] = "you have checked for realme";
+
+            if (Request.Cookies["computer"].Values.ToString() != null)
+            {
+                if (Request.Cookies["computer"]["samsung"] != null)
+                    Label2.Text = Label2.Text += Response.Cookies["computer"]["samsung"] + " " + "  ";
+
+                if (Request.Cookies["computer"]["nokia"] != null)
+                    Label2.Text = Label2.Text += Response.Cookies["computer"]["nokia"] + " " + "  ";
+
+                if (Request.Cookies["computer"]["vivo"] != null)
+                    Label2.Text = Label2.Text += Response.Cookies["computer"]["vivo"] + " " + "  ";
+
+                if (Request.Cookies["computer"]["oppo"] != null)
+                    Label2.Text = Label2.Text += Response.Cookies["computer"]["oppo"] + " " + "  ";
+
+                if (Request.Cookies["computer"]["realme"] != null)
+                    Label2.Text = Label2.Text += Response.Cookies["computer"]["realme"] + " " + "  ";
+            }
+
+            else
+            {
+
+                Label2.Text = "please select your choice";
+                Response.Cookies["computer"].Expires = DateTime.Now.AddDays(-1);
+            }
+        }
+    }
+}

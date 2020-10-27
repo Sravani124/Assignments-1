@@ -1,0 +1,27 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="cookie3-at.aspx.cs" Inherits="WebApplication2.cookie3_at" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+           <asp:Label ID="Label1" runat="server" Text="select electronic items" ></asp:Label>
+            <br />
+            <br />
+            <asp:CheckBox ID="CheckBox1" runat="server" Text="Mobile" OnCheckedChanged="CheckBox1_CheckedChanged" /><br />
+            <asp:CheckBox ID="CheckBox2" runat="server" Text="Tv" /><br />
+            <asp:CheckBox ID="CheckBox3" runat="server" Text="Fridge" /><br />
+            <asp:CheckBox ID="CheckBox4" runat="server" Text="ovan" /><br />
+            <asp:CheckBox ID="CheckBox5" runat="server" Text="washing Machine" /><br />
+            <asp:Button ID="Button1" runat="server" OnClick="Page_Load" Text="CheckOn" /><br />
+        </div>
+    </form>
+     <p>
+        <asp:Label ID="Label2" runat="server" ></asp:Label>
+    </p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+namespace asp_pract_26
+{
+    public partial class datatable_at : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("FirstName");
+            dt.Columns.Add("LastName");
+            dt.Columns.Add("Designation");
+            dt.Columns.Add("Location");
+            dt.Columns.Add("Country");
+
+
+            dt.Rows.Add("sravani", "rao", "Manager", "Hyderabad", "India");
+            dt.Rows.Add("sanjay", "rao", "Analyst", "Chennai", "India");
+            dt.Rows.Add("bharghavi", "chowdary", "Developer", "pune", "India");
+            dt.Rows.Add("pravali", "sharma", "Tester", "Banglore", "India");
+            dt.Rows.Add("deepika", "velluri", "HR", "New Delhi", "India");
+            dt.Rows.Add("karthik", "rao", "Manager", "Chennai", "India");
+            dt.Rows.Add("ravi", "yadav", "Developer", "Hyderabad", "India");
+            dt.Rows.Add("vijay", "kumar", "Analyst", "pune", "India");
+            dt.Rows.Add("venkat", "alluri", "Manager", "Banglore", "India");
+            dt.Rows.Add("sanjana", "rao", "Developer", "Chennai", "India");
+            datalist1.DataSource = dt;
+            datalist1.DataBind();
+        }
+    }
+}
