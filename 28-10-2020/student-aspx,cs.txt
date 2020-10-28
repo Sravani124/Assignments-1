@@ -1,0 +1,49 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="datagridview.aspx.cs" Inherits="datalist_28.datagridview" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <p>The DataGrid contains DataTable records</p>
+       
+        <asp:DataGrid ID="DataGrid1" runat="server"></asp:DataGrid>
+            </div>
+    </form>
+</body>
+</html>
+
+//cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+namespace datalist_28
+{
+    public partial class datagridview : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add("ID");
+            table.Columns.Add("Name");
+            table.Columns.Add("Email");
+
+            table.Rows.Add("101", "sravani", "sravani@gmail.com");
+            table.Rows.Add("102", "bharghavi", "bharghavi@gmail.com");
+            table.Rows.Add("103", "kumar", "kumar@gmail.com");
+            table.Rows.Add("104", "lucky", "lucky@gmail.com");
+            table.Rows.Add("101", "sanjay", "sanjay@gmail.com");
+
+            DataGrid1.DataSource = table;
+            DataGrid1.DataBind();
+        }
+    }
+}
