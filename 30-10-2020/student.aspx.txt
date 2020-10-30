@@ -1,0 +1,128 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="at1.aspx.cs" Inherits="at_form.at1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            margin-left: 37px;
+        }
+        .auto-style2 {
+            width: 683px;
+        }
+        .auto-style3 {
+            width: 821px;
+            margin-left: 37px;
+        }
+        .auto-style4 {
+            width: 821px;
+        }
+        .auto-style5 {
+            margin-left: 37px;
+            width: 103px;
+        }
+        .auto-style6 {
+            width: 103px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label1" runat="server" Text="Student Registration Form"></asp:Label>
+        </div>
+        <table style="width:100%;">
+            <tr>
+                <td>FirstName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox5" ErrorMessage="This field must be required" ForeColor="Red"></asp:RequiredFieldValidator>
+                </td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>LastName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextBox6" ErrorMessage="This Field must be required" ForeColor="Red"></asp:RequiredFieldValidator>
+                </td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>FathersName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox7" ErrorMessage="Name must be required" ForeColor="Red"></asp:RequiredFieldValidator>
+                </td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <table style="width:100%;">
+            <tr>
+                <td class="auto-style4">MothersName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Name must be required" ForeColor="Red"></asp:RequiredFieldValidator>
+                </td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style3">Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:RadioButton ID="RadioButton6" runat="server" Text="Male" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:RadioButton ID="RadioButton7" runat="server" Text="Female" />
+                </td>
+                <td class="auto-style2">
+                    &nbsp;</td>
+               
+            </tr>
+            <tr>
+                <td class="auto-style4">Aggregate&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox10" runat="server" CssClass="auto-style1" Width="126px"></asp:TextBox>
+                &nbsp;&nbsp;&nbsp;
+                    <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Aggregate should be greater than 60" ForeColor="Red" ControlToValidate="TextBox10"></asp:RangeValidator>
+                </td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <table style="width:100%;">
+           
+            <tr>
+                <td class="auto-style5">Course</td>
+                <td class="auto-style2">
+                    <asp:RadioButton ID="RadioButton3" runat="server" Text="ECE"   /><br />
+                    <asp:CheckBox ID="checkbox1" runat="server" Text="Digital Communication" ></asp:CheckBox>
+                    <asp:CheckBox ID="checkbox2" runat="server" Text="Analog"></asp:CheckBox>
+                    <asp:CheckBox ID="checkbox3" runat="server" Text="Microcontroller"></asp:CheckBox><br />
+                    <asp:RadioButton ID="RadioButton4" runat="server" Text="CSE" /><br />
+                    <asp:CheckBox ID="checkbox4" runat="server" Text="ComputerOrganization"></asp:CheckBox>
+                    <asp:CheckBox ID="checkbox5" runat="server" Text="Operating System"></asp:CheckBox>
+                    <asp:CheckBox ID="checkbox6" runat="server"  Text="Graphics"></asp:CheckBox>
+                </td>
+                
+            </tr>
+            <tr>
+                <td class="auto-style6">
+                    &nbsp;</td>
+            </tr>
+        </table>
+
+        <p>
+            
+            <asp:Button ID="Button1" runat="server" Text="Register" />
+            
+        </p>
+        <p>
+        </p>
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+    </form>
+</body>
+</html>
