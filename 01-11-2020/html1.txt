@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">TutorialPoint</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="Homepage.html">Home</a></li>
+                <li><a href="Aboutus.html">About us</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">courses <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="python.html">python</a></li>
+                        <li><a href="asp.net.html">Asp.net</a></li>
+                        <li><a href="csharp.html">csharp</a></li>
+                        <li><a href="java.html">java</a></li>
+                    </ul>
+                <li><a href="Article.html">Article</a></li>
+                <li><a href="Facility.html">Facility</a></li>
+                <li><a href="contact.html">contact</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <p class="text-center" style="color:blueviolet;"><b>WELCOME TO TUTORIALSPOINT WEBSITE</b></p><br /><br />
+    <div>
+
+ <p  class="text-center" >   <img src=https://4.bp.blogspot.com/-PL4EydapjnQ/VQ5A3g0lnZI/AAAAAAAAA58/EJBsa_oujjc/s1600/Tutorialspoint%2BOffline%2B2015%2B-ARSDK.PNG" alt="tutorialimg" width="700" height="600"/></p>
+
+</div>
+
+</body>
+</html>

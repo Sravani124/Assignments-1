@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p   class="text-center" style="color:forestgreen;"><b>To contact us</b></p><br /><br />
+  <p  class="text-center">Email Address</p> <p class="text-center"><b>tutoriaspoint@gmail.com</b></p><br /><br />
+   <p   class="text-center"> Mobile Number </p> <p class="text-center"><b>9864555123</b></p>
+</body>
+</html>

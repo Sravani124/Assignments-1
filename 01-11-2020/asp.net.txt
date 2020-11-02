@@ -1,0 +1,30 @@
+<meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <p class="text-center" style="color:blueviolet;"><b>asp.net</b></p><br /><br />
+    <p><b>Description</b></p>
+
+    <p>
+        <blockquote>
+            ASP.NET is a web application framework developed and marketed by Microsoft to allow programmers to build dynamic websites. It allows you to use a full featured programming language such as C# or VB.NET to build web applications easily.
+            This online training covers all the basic elements of ASP.NET that a beginner would require to get started.
+        </blockquote>
+    </p>
+
+    <p>
+        <b>
+            Audience
+
+        </b>
+    </p>
+    
+
+    <p><blockquote>This online training has been prepared for the beginners to help them understand basic
+        ASP.NET programming. After completing this online training you will find yourself at a moderate level of expertise in ASP.NET programming from where you can take yourself to next levels.</blockquote></p>
+
+
+
+</body>
+</html>

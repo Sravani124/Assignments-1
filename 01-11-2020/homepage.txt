@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <br /><br />
+        <img src="https://lh3.googleusercontent.com/proxy/KW0_GBlr5XFCbcjZKd1xMrXDg25aP7QSqHURe_OqZo-4noX6JacQddOYCTJlCLfqwTGW_5V1sNoEReidoq-VNxe63cAj1AOBB72gl3NYhFsSVREurUrxQJHwEwrBexMJ4wtHfcolFIk" class="img-rounded" alt="tutorialspoint" width="1000" height="500">
+
+    </div>
+    <br /><br />
+    <p class="text-center"><b>Coaching center Review Form </b></p>
+    
+    <div class="container">
+
+        <form class="form-horizontal" action="">
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">FirstName:</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" placeholder="Enter FirstName" name="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">LastName:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter LastName" name="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">PhoneNumber:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter PhoneNumber" name="number">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">EmailID:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter EmailID" name="email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Name of attended Program:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pwd" placeholder="Name of attended Program" name="text">
+                </div>
+            </div>
+
+            <div>
+                <label class="radio-inline">
+                    <b> Course Structure</b> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<input type="radio" name="optradio" checked> 1
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio"> 2
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio" checked>3
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio">4
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio">5
+                </label>
+            </div>
+
+            <div>
+                <label class="radio-inline">
+                    <b> Course Content </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<input type="radio" name="optradio" checked> 1
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio"> 2
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio" checked>3
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio">4
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio">5
+                </label>
+            </div>
+
+
+            <div>
+                <label class="radio-inline">
+                    <b>  Handout and Trainingaids</b> &nbsp;&nbsp; &nbsp;&nbsp;<input type="radio" name="optradio" checked> 1
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio"> 2
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio" checked>3
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio">4
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio">5
+                </label>
+            </div>
+
+
+            <div>
+                <label class="radio-inline">
+                    <b>
+                        Training
+                        and Organization
+                    </b> &nbsp;&nbsp; &nbsp;&nbsp;<input type="radio" name="optradio" checked> 1
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio"> 2
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio" checked>3
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio">4
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio">5
+                </label>
+            </div>
+            <br />
+            <br />
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>

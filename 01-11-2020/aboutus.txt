@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>About us</title>
+</head>
+<body>
+    <div class="container">
+        <p  style="color:red;">
+            <b>Software Training Infrastructure</b>
+        </p>
+        </div>
+        <p>
+            <blockquote>
+                Tutorils Point Institute has World Class Lab facilities located in the heart of the city of Hyderabad & Chennai.
+
+                World Class Software Training Lab having modern classroom equipped with latest teaching aids.
+
+                Full fledged Software Lab with state-of-the-art PCs connected in network and Open Source/Development software.
+            </blockquote>
+        </p>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>

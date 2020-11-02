@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p class="text-center" style="color:blueviolet;"><b>java </b></p><br /><br />
+    <p><b>Description</b></p>
+
+    <p>
+        <blockquote>
+            Java is a high-level programming language originally developed by Sun Microsystems and released in 1995.
+            Java runs on a variety of platforms, such as Windows, Mac OS, and the various versions of UNIX. This video Training gives a complete understanding of Java.
+        </blockquote>
+    </p>
+
+    <p>
+        <b>
+            Audience
+
+        </b>
+    </p>
+    <p><blockquote>
+    The Video tutorial has been prepared for the beginners to help them understand the basic to advanced concepts related to Java Programming language.
+
+</blockquote></p>
+</body>
+</html>

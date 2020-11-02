@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p class="text-center" style="color:blueviolet;"><b>Python</b></p><br /><br />
+
+    <p><b>Description</b></p>
+          
+    <p><blockquote>Python is a general-purpose interpreted, interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. Like Perl, Python source code is also available under the GNU General Public License (GPL). 
+        our online training gives enough understanding on Python programming language.</blockquote></p><br /><br />
+
+
+    <p><b>
+    Audience
+    
+</b></p>
+    <p><blockquote>
+
+    The Video tutorial has been prepared for the beginners to help them understand the basic to advanced concepts related to python Programming language.
+
+</blockquote></p>
+</body>
+</html>
