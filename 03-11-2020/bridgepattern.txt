@@ -1,0 +1,85 @@
+sing System;
+
+namespace at_03
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Abstraction ab = new RefinedAbstraction();
+
+            // Set implementation and call
+
+            ab.Implementor = new ConcreteImplementorA();
+            ab.Operation();
+
+            // Change implemention and call
+
+            ab.Implementor = new ConcreteImplementorB();
+            ab.Operation();
+
+           
+
+            Console.ReadKey();
+        }
+
+        //abstaction class
+        class Abstraction
+
+        {
+            protected Implementor implementor;
+
+            // Property
+
+            public Implementor Implementor
+            {
+                set { implementor = value; }
+            }
+
+            public virtual void Operation()
+            {
+                implementor.Operation();
+            }
+        }
+
+        //The 'Implementor' abstract class
+        abstract class Implementor
+
+        {
+            public abstract void Operation();
+        }
+
+        //  The 'RefinedAbstraction' class
+        class RefinedAbstraction : Abstraction
+
+        {
+            public override void Operation()
+            {
+                implementor.Operation();
+            }
+        }
+
+        //The 'ConcreteImplementorA' class
+
+        class ConcreteImplementorA : Implementor
+
+        {
+            public override void Operation()
+            {
+                Console.WriteLine("ConcreteImplementorA Operation");
+            }
+        }
+
+        // The 'ConcreteImplementorB' class
+        class ConcreteImplementorB : Implementor
+
+        {
+            public override void Operation()
+            {
+                Console.WriteLine("ConcreteImplementorB Operation");
+            }
+        }
+    }
+
+}
+
