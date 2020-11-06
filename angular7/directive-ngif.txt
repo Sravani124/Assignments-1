@@ -1,0 +1,39 @@
+@Component({
+  selector: 'ngif-example',
+  template: `
+<h4>NgIf</h4>
+<ul "To remove the age of the person and name who is less than 30">
+  <li *ngIf="person.age < 30"> 
+  {{ person.name }} ({{ person.age }})
+  </li>
+</ul>
+`
+})
+
+//.html
+
+class NgIfExampleComponent {
+
+  people: any[] = [
+    {
+      "name": "sravani",
+      "age": 35
+    },
+    {
+      "name": "bharghavi",
+      "age": 32
+    },
+    {
+      "name": "Tinku",
+      "age": 21
+    },
+    {
+      "name": "Tillu",
+      "age": 34
+    },
+    {
+      "name": "Cook  Tyson",
+      "age": 32
+    }
+  ];
+}

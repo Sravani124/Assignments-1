@@ -1,0 +1,31 @@
+ import { Component } from '@angular/core';
+
+@Component ({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+  
+})
+
+export class AppComponent{
+   apptitle: string = 'Welcome';
+} 
+
+
+//html
+
+ <div>
+              <h1>{{apptitle}}</h1>
+              <div>welcome to angular</div>
+         </div>
+
+
+//2nd
+
+ <ul>
+        <b> <h2>list of fruites</h2></b>
+        <li><h4><a href="This is orange">orange</a></h4></li>
+        <li><h4><a href="This is apple">apple</a></h4></li>
+        <li><h4><a href="This is banana">banana</a></h4></li>
+        <li><h4><a href="This is strawberry">strawberry</a></h4></li>
+    </ul>
