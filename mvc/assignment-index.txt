@@ -1,0 +1,156 @@
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+
+    <h1>WELCOME TO MUSIC STORE</h1>
+
+
+    <p style="font-family:Cambria;">select the music you like</p>
+    <p><a href="classic" class="btn btn-primary ">classic </a></p>
+    <p><a href="hip-pop" class="btn btn-primary ">hip-pop </a></p>
+    <p><a href="rock" class="btn btn-primary ">rock </a></p>
+    <p><a href="mashup" class="btn btn-primary ">mashup </a></p>
+    <p><a href="folk" class="btn btn-primary ">folk </a></p>
+</div>
+<br /><br />
+
+
+
+
+<body>
+    
+        <div >
+            <div class="col-lg-6" style="background-color:antiquewhite; text-align:left">
+                <h2>Registration form</h2>
+                <table align="left">
+                    <tr>
+                        <td>UserName:</td>
+                        <td><input type="text" id="name" /></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="text" id="mail" /></td>
+                    </tr>
+
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" id="psw" /></td>
+                    </tr>
+                    <tr>
+                        <td>Confirm Password:</td>
+                        <td><input type="password" id="cpsw" /></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">
+                            <button id="Button1">Submit</button>
+                            <br />
+                            <br />
+
+                        </td>
+
+                        <td class="auto-style2">&nbsp;</td>
+                    </tr>
+                </table>
+
+            </div>
+     </div>
+
+        <div class="col-lg-6" style="background-color:aliceblue;text-align:center;height:240px";>
+            <table align="right" border="1" ;>
+                <thead class=".table-primary">
+                    <tr>
+                        <th>Music Collection</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+
+                        <td>Western</td>
+                    </tr>
+                    <tr>
+
+                        <td>folk</td>
+
+                    </tr>
+                    <tr>
+
+                        <td>hip-hop</td>
+
+                    </tr>
+                    <tr>
+
+                        <td>Mashup</td>
+
+                    </tr>
+                    <tr>
+
+                        <td>Group dance</td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
+
+            <br />
+            <br />
+
+        </div>
+          
+
+        <div class="row">
+            <div class="col-lg-4" style="background-color:greenyellow">
+                <h2>Singers</h2>
+
+                <div class="form-check">
+
+                    <label class="form-check-label" for="check1">
+                        <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>shreya ghoshal
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label" for="check2">
+                        <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">sid sriram
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">SP.Balu
+                    </label>
+                </div><br /><br />
+
+                <h2>Music Types</h2>
+
+                <div class="radio">
+                    <label><input type="radio" name="optradio">western</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio">classic</label>
+                </div>
+                <div class="radio disabled">
+                    <label><input type="radio" name="optradio">hiphop</label>
+                </div>
+                <br /><br />
+
+                <h2>Songs</h2>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        Dropdown Example
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">inkem inkem kavle</a></li>
+                        <li><a href="#">kadalale</a></li>
+                        <li><a href="#">gira gira</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</body>
