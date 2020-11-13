@@ -1,0 +1,56 @@
+@using mvc_at.Models
+
+@model Registration
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RegistrationForm</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+
+        <p> Firstname:@Html.TextBoxFor(x => x.username)</p>
+        <p>Password :@Html.TextBoxFor(x => x.Password)</p>
+        <p>
+            Gender: <br />Male @Html.RadioButtonFor(x => x.gender, "male")<br />
+            Female  @Html.RadioButtonFor(x => x.gender, "female")
+        </p>
+        <p> Address:@Html.TextBoxFor(x => x.Address)</p>
+
+
+
+        @*<p> Hobbies:@Html.TextBoxFor(x => x.Hobbies)</p>*@
+        <p>
+            Hobbies:<br />@Html.CheckBoxFor(x => x.Hobbies)Dancing <br />
+            @Html.CheckBoxFor(x => x.Hobbies)Singing<br />
+            @Html.CheckBoxFor(x => x.Hobbies)Eating<br />
+        </p>
+
+
+
+        @*<p> courses:@Html.TextBoxFor(x => x.courses)</p>*@
+        <p>
+            Courses:<br />@Html.CheckBoxFor(x => x.courses)Cse <br />
+            @Html.CheckBoxFor(x => x.courses)Ece<br />
+            @Html.CheckBoxFor(x => x.courses)Eee<br />
+        </p>
+
+
+
+        @*<p> skills:@Html.TextBoxFor(x => x.skills)</p>*@
+        <p>
+            Skills:<br />@Html.CheckBoxFor(x => x.skills)Java <br />
+            @Html.CheckBoxFor(x => x.skills)Python<br />
+            @Html.CheckBoxFor(x => x.skills)c#<br />
+        </p>
+
+
+        <input type="submit" value="Register me" />
+    }
+
+</body>
+</html>

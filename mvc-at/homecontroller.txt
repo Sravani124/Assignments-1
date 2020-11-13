@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using mvc_at.Models;
+
+namespace mvc_at.Controllers
+{
+    public class HomeController : Controller
+    {
+        // GET: Home
+        public ViewResult Index()
+        {
+            return View();
+        }
+        [HttpGet]
+        public ViewResult RegistrationForm()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ViewResult RegistrationForm(Registration registration)
+        {
+            return View("congartulation", registration);
+        }
+    }
+}

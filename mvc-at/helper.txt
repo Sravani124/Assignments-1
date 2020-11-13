@@ -1,0 +1,89 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        PASSWORD: @Html.Password("Password", "", new { @class = "form-control" })
+    </div>
+    <br /><br />
+    @*//TEXTAREA*@
+    <div>
+        ADDRESS:   @Html.TextArea("Address", " ", new { @class = "form-control", id = "IdAddress" })<BR /><br />
+    </div>
+    @*CHECKBOX*@
+    <div>
+        HOBBIES:
+        Dancing   @Html.CheckBox("Dancing")
+        Singing   @Html.CheckBox("Singing")
+        Cooking  @Html.CheckBox("cooking")<br /><br />
+    </div>
+    @*radiobutton*@
+    <div>
+        Gender:
+        MALE:  @Html.RadioButton("Gender", "Male", true, new { id = "male" })
+        FEMALE:  @Html.RadioButton("Gender", "female", true, new { id = "female" })
+    </div><br /><br />
+
+    @*DROPDOWNLIST*@
+    <div>
+        COURSES:
+        @{
+            IEnumerable<string> strList = new List<string> { "ECE", "CSE", "EEE", "MECH" };
+        }
+        @Html.DropDownList("ddlCourse", new SelectList(strList, strList.FirstOrDefault()), "--Select Course----")
+    </div><br /><br />
+
+    @*LISTBOX*@
+    <div>
+        sKILLS:
+        @Html.ListBox("Select Skills",new List<SelectListItem> {
+       new SelectListItem{Text= "C#",Value="1"},
+       new SelectListItem{ Text="ASP.NET",Value="2" },
+       new SelectListItem{ Text="ASP.NET Core",Value="3" },
+       new SelectListItem{ Text="Azure",Value="4" },
+       new SelectListItem{ Text="JAVA",Value="5" },
+       new SelectListItem{ Text="PYTHON",Value="6" }
+       })
+    </div><br /><br />
+    @*LABEL*@
+    <div>
+        USERNAME:   @Html.Label("User Name ")
+    </div><br /><br />
+
+    @*BEGINFORM*@
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+
+    {
+        // Code here..
+        <h2>hello !!!!</h2>
+    }
+</body>
+</html>
+
+//homecontroller.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace helper_at.Controllers
+{
+    public class HomeController : Controller
+    {
+        // GET: Home
+        public ViewResult Index()
+        {
+            return View();
+        }
+    }
+}

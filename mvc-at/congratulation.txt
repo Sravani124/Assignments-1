@@ -1,0 +1,19 @@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Congartulation</title>
+</head>
+<body>
+    <div> 
+        <h1>Congratulation,@Model.username!!</h1>
+        <p>Your Registartion has been Successfully completed</p>
+    </div>
+</body>
+</html>

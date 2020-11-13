@@ -1,0 +1,18 @@
+using System.Web;
+
+namespace mvc_at.Models
+{
+    public class Registration
+    {
+        public string username { get; set; }
+      
+        public int Password { get; set; }
+        public string gender { get; set; }
+        public string Address { get; set; }
+        public bool Hobbies { get; set; }
+        public bool courses { get; set; }
+        public bool skills { get; set; }
+      
+    }
+   
+}
