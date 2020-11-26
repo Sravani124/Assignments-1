@@ -1,0 +1,53 @@
+using BANK_PROJECT2.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.UI.WebControls;
+
+namespace BANK_PROJECT2.Controllers
+{
+    public class Home1Controller : Controller
+    {
+        PBEntities PB = new PBEntities();
+        // GET: Home1
+        public ActionResult Home()
+        {
+            return View();
+        }
+        public ViewResult Home1()
+        {
+            return View();
+
+        }
+
+
+        [HttpGet]
+        public ActionResult Register(int id = 0)//get the data from table
+        {
+            RegisterTable usermodel = new RegisterTable();//create instance for Model table
+
+            return View(usermodel);//View data in the table
+        }
+        [HttpPost]
+        public ActionResult Register(RegisterTable Rg)
+        {
+
+            using (PecuniaBankEntities DB = new PecuniaBankEntities()) //create an instance for table name to adding the data in the table
+            {
+
+                DB.RegisterTables.Add(Rg);//Add the data in table
+                DB.SaveChanges();//save the data
+            }
+
+            ModelState.Clear();
+            ViewBag.SuccessMessage = "Registration Successfully.";
+            return View("Register", new RegisterTable());
+        }
+        
+      
+    }
+    }
+
+

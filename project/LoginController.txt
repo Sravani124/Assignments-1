@@ -1,0 +1,45 @@
+using BANK_PROJECT2.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace BANK_PROJECT2.Controllers
+{
+    public class LoginController : Controller
+    {
+        // GET: Login
+        public ViewResult Login()
+        {
+            return View();
+        }
+        public ActionResult Login1()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Authorize(RegisterTable Fg)//It is for checking
+        {
+            using (PecuniaBankEntities db = new PecuniaBankEntities())
+            {
+                var checkdetails = db.RegisterTables.Where(x => x.Account_Holdername == Fg.Account_Holdername && x.Password == Fg.Password).FirstOrDefault();//And operation
+                if (checkdetails == null)
+                {
+                    Fg.LoginErrorMsg = "wrong password & account holder name.";
+                    return View("Login", Fg);
+
+                    //Fg.LoginErrorMsg = "Login Successfully.";
+                    //return View("Login", Fg);
+                }
+                else
+                {
+                    Fg.LoginErrorMsg = "Login Successfully.";
+                    //return View("Login", Fg);
+                    return RedirectToAction(Url.Action("Register"));
+                }
+                
+            }
+        }
+    }
+}
